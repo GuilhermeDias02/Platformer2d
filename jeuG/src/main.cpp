@@ -30,7 +30,7 @@ int main()
 	//fonction mouv droite
 	//fonction mouv saut
 
-        window.clear();
+        //window.clear();
         //window.draw();
         window.display();
     }

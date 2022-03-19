@@ -7,7 +7,7 @@
 void loadTexturesMap1()
 {
   sf::Texture grass1;
-  if (!grass.loadFromFile("../assets/blocterre.png"))
+  if (!grass1.loadFromFile("../assets/blocterre.png"))
     {
       printf("%s", "Failed to load grass");
       return;
@@ -77,7 +77,7 @@ void loadSpritesMap1()
   sf::Sprite bloc27;
 };
 
-void setSpriteTextureMap1(sf::Sprite)
+void setSpriteTextureMap1()
 {
   bloc1.setTexture(grass1);
   bloc2.setTexture(grass1);
@@ -108,7 +108,7 @@ void setSpriteTextureMap1(sf::Sprite)
   bloc27.setTexture(grass1);
 };
 
-void setPosSpriteMap1(sf::Sprite, sf::Texture, sf::Window)
+void setPosSpriteMap1()
 {
   bloc1.setPosition(sf::Vector2f(0.f, 640.f));
   bloc2.setPosition(sf::Vector2f(80.f, 640.f));
@@ -139,7 +139,33 @@ void setPosSpriteMap1(sf::Sprite, sf::Texture, sf::Window)
   bloc27.setPosition(sf::Vector2f(800.f, 400.f));
   
   window.clear();
-  window.draw(bloc1, bloc2, bloc3, bloc4, bloc5, bloc6, bloc7, bloc8, bloc8, bloc9, bloc10, bloc11, bloc12, bloc13, bloc14, bloc15, bloc16, bloc17, bloc18, bloc19, bloc20, bloc21, bloc22, bloc23, bloc24, bloc25, bloc26, bloc27);
+  window.draw(bloc1);
+  window.draw(bloc2);
+  window.draw(bloc3);
+  window.draw(bloc4);
+  window.draw(bloc5);
+  window.draw(bloc6);
+  window.draw(bloc7);
+  window.draw(bloc8);
+  window.draw(bloc9);
+  window.draw(bloc10);
+  window.draw(bloc11);
+  window.draw(bloc12);
+  window.draw(bloc13);
+  window.draw(bloc14);
+  window.draw(bloc15);
+  window.draw(bloc16);
+  window.draw(bloc17);
+  window.draw(bloc18);
+  window.draw(bloc19);
+  window.draw(bloc20);
+  window.draw(bloc21);
+  window.draw(bloc22);
+  window.draw(bloc23);
+  window.draw(bloc24);
+  window.draw(bloc25);
+  window.draw(bloc26);
+  window.draw(bloc27);
 };
 
 void setBackgroundMap1()

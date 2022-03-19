@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <SFML/Graphics.hpp>
-#include "/include/move.hpp"
+#include "../include/move.hpp"
 
 
 void jump(sf::Sprite)

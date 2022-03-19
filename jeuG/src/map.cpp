@@ -1,11 +1,12 @@
 #include <SFML/Graphics.hpp>
 #include <stdio.h>
 #include <SFML/Graphics.hpp>
+#include "../include/main.hpp"
 #include "../include/map.hpp"
 
 void loadTexturesMap1()
 {
-  sf::Texture grass;
+  sf::Texture grass1;
   if (!grass.loadFromFile("../assets/blocterre.png"))
     {
       printf("%s", "Failed to load grass");
@@ -76,12 +77,12 @@ void loadSpritesMap1()
   sf::Sprite bloc27;
 };
 
-void setSpriteTextureMap1()
+void setSpriteTextureMap1(sf::Sprite)
 {
   bloc1.setTexture(grass1);
   bloc2.setTexture(grass1);
   bloc3.setTexture(grass1);
-  bloc4.settexture(grass3);
+  bloc4.setTexture(grass3);
   bloc5.setTexture(grass1);
   bloc6.setTexture(grass1);
   bloc7.setTexture(grass3);
@@ -93,23 +94,74 @@ void setSpriteTextureMap1()
   bloc13.setTexture(grass1);
   bloc14.setTexture(grass1);
   bloc15.setTexture(grass1);
-  bloc16.setTexture(grass1);
-  bloc17.setTexture(grass4);
-  bloc18.setTexture(grass3);
+  bloc16.setTexture(grass4);
+  bloc17.setTexture(grass3);
+  bloc18.setTexture(grass1);
   bloc19.setTexture(grass1);
   bloc20.setTexture(grass1);
-  bloc21
+  bloc21.setTexture(grass2);
+  bloc22.setTexture(grass1);
+  bloc23.setTexture(grass1);
+  bloc24.setTexture(grass1);
+  bloc25.setTexture(grass1);
+  bloc26.setTexture(grass1);
+  bloc27.setTexture(grass1);
 };
 
-void setPosSpriteMap1()
+void setPosSpriteMap1(sf::Sprite, sf::Texture, sf::Window)
 {
   bloc1.setPosition(sf::Vector2f(0.f, 640.f));
   bloc2.setPosition(sf::Vector2f(80.f, 640.f));
+  bloc3.setPosition(sf::Vector2f(160.f, 640.f));
+  bloc4.setPosition(sf::Vector2f(240.f, 640.f));
+  bloc5.setPosition(sf::Vector2f(320.f, 560.f));
+  bloc6.setPosition(sf::Vector2f(400.f, 640.f));
+  bloc7.setPosition(sf::Vector2f(480.f, 640.f));
+  bloc8.setPosition(sf::Vector2f(560.f, 560.f));
+  bloc9.setPosition(sf::Vector2f(640.f, 480.f));
+  bloc10.setPosition(sf::Vector2f(720.f, 640.f));
+  bloc11.setPosition(sf::Vector2f(800.f, 640.f));
+  bloc12.setPosition(sf::Vector2f(880.f, 640.f));
+  bloc13.setPosition(sf::Vector2f(960.f, 640.f));
+  bloc14.setPosition(sf::Vector2f(1040.f, 640.f));
+  bloc15.setPosition(sf::Vector2f(1120.f, 640.f));
+  bloc16.setPosition(sf::Vector2f(1200.f, 640.f));
+  bloc17.setPosition(sf::Vector2f(1280.f, 640.f));
+  bloc18.setPosition(sf::Vector2f(1360.f, 640.f));
+  bloc19.setPosition(sf::Vector2f(1440.f, 640.f));
+  bloc20.setPosition(sf::Vector2f(1280.f, 560.f));
+  bloc21.setPosition(sf::Vector2f(1200.f, 560.f));
+  bloc22.setPosition(sf::Vector2f(1200.f, 480.f));
+  bloc23.setPosition(sf::Vector2f(1120.f, 400.f));
+  bloc24.setPosition(sf::Vector2f(1040.f, 400.f));
+  bloc25.setPosition(sf::Vector2f(960.f, 400.f));
+  bloc26.setPosition(sf::Vector2f(880.f, 400.f));
+  bloc27.setPosition(sf::Vector2f(800.f, 400.f));
   
-  window.draw(bloc1, );
+  window.clear();
+  window.draw(bloc1, bloc2, bloc3, bloc4, bloc5, bloc6, bloc7, bloc8, bloc8, bloc9, bloc10, bloc11, bloc12, bloc13, bloc14, bloc15, bloc16, bloc17, bloc18, bloc19, bloc20, bloc21, bloc22, bloc23, bloc24, bloc25, bloc26, bloc27);
 };
 
-void Map1()
+void setBackgroundMap1()
 {
-  
+  sf::Sprite background;
+  sf::Texture sky;
+  if (!sky.loadFromFile("../assets/cielplt2d.png"))
+    {
+      printf("%s", "Failed to load sky");
+      return;
+    }
+  background.setTexture(sky);
+
+  window.clear();
+  window.draw(background);
+}
+
+void initMap1()
+{
+  setBackgroundMap1();
+  loadTexturesMap1();
+  loadSpritesMap1();
+  setSpriteTextureMap1();
+  setPosSpriteMap1();
 };

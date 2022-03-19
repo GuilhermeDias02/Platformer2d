@@ -1,17 +1,18 @@
 #include <SFML/Graphics.hpp>
 #include <stdio.h>
-#include "move.cpp"
-#include "../include/move.hpp"
+#include "../include/main.hpp"
+//#include "move.cpp"
+//#include "../include/move.hpp"
 #include "map.cpp"
 #include "../include/map.hpp"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML works!");
-    window.setFrameLimit(60);
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "Platformer2d");
+    window.setFramerateLimit(60);
     
 
-    sf::CircleShape personnage(sf::)
+    
 
     while (window.isOpen())
     {
@@ -22,12 +23,15 @@ int main()
                 window.close();
         }
 
+	
+	initMap1();
+	
 	//fonction mouvement gauche
 	//fonction mouv droite
 	//fonction mouv saut
 
         window.clear();
-        window.draw(plateforme);
+        //window.draw();
         window.display();
     }
 

@@ -12,7 +12,7 @@ int main()
     window.setFramerateLimit(60);
     window.setVerticalSyncEnabled(false);
 
-    initMap1();
+    
 
     while (window.isOpen())
     {
@@ -23,14 +23,17 @@ int main()
                 window.close();
         }
 
-	
+        
 	    
 	
 	//fonction mouvement gauche
 	//fonction mouv droite
 	//fonction mouv saut
 
-        //window.clear();
+        window.clear();
+        
+        initMap1();
+
         //window.draw();
         window.display();
     }

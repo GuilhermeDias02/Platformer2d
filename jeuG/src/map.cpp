@@ -4,6 +4,20 @@
 #include "../include/main.hpp"
 #include "../include/map.hpp"
 
+void setBackgroundMap1()
+{
+  sf::Sprite background;
+  sf::Texture sky;
+  if (!sky.loadFromFile("../assets/cielplt2d.png"))
+    {
+      printf("%s", "Failed to load sky");
+      return;
+    }
+  background.setTexture(sky);
+
+  window.draw(background);
+}
+
 void loadTexturesMap1()
 {
   sf::Texture grass1;
@@ -138,7 +152,6 @@ void setPosSpriteMap1()
   bloc26.setPosition(sf::Vector2f(880.f, 400.f));
   bloc27.setPosition(sf::Vector2f(800.f, 400.f));
   
-  window.clear();
   window.draw(bloc1);
   window.draw(bloc2);
   window.draw(bloc3);
@@ -167,21 +180,6 @@ void setPosSpriteMap1()
   window.draw(bloc26);
   window.draw(bloc27);
 };
-
-void setBackgroundMap1()
-{
-  sf::Sprite background;
-  sf::Texture sky;
-  if (!sky.loadFromFile("../assets/cielplt2d.png"))
-    {
-      printf("%s", "Failed to load sky");
-      return;
-    }
-  background.setTexture(sky);
-
-  window.clear();
-  window.draw(background);
-}
 
 void initMap1()
 {

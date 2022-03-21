@@ -1,12 +1,12 @@
 #ifndef MAP_H_
 #define MAP_H_
 
+void setBackgroundMap1();
 void loadTexturesMap1();
 void loadTexturesOther();
 void loadSpritesMap1();
 void setSpriteTextureMap1();
 void setPosSpriteMap1();
-void setBackgroundMap1();
 void initMap1();
 
 sf::Texture grass1;

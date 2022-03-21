@@ -51,10 +51,10 @@ void loadTexturesMap1()
 
 void loadTexturesOther()
 {
-  sf::Texture cle;
-  if (!cle.loadFromFile("../assets/cle.png"))
+  sf::Texture key;
+  if (!key.loadFromFile("../assets/cle.png"))
     {
-      printf("%s", "Failed to load cle");
+      printf("%s", "Failed to load key");
       return;
     }
 };

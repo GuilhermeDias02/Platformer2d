@@ -2,9 +2,9 @@
 #define MAP_H_
 
 void loadTexturesMap1();
-void loadTexturesother();
+void loadTexturesOther();
 void loadSpritesMap1();
-void loadSpritesTexturesMap1();
+void setSpriteTextureMap1();
 void setPosSpriteMap1();
 void setBackgroundMap1();
 void initMap1();

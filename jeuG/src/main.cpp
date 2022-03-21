@@ -8,11 +8,11 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "Platformer2d");
+    //sf::RenderWindow window(sf::VideoMode(1280, 720), "Platformer2d");
     window.setFramerateLimit(60);
-    
+    window.setVerticalSyncEnabled(false);
 
-    
+    initMap1();
 
     while (window.isOpen())
     {
@@ -24,7 +24,7 @@ int main()
         }
 
 	
-	initMap1();
+	    
 	
 	//fonction mouvement gauche
 	//fonction mouv droite

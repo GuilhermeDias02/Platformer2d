@@ -2,15 +2,16 @@
 #define MAP_H_
 
 void setBackgroundMap1();
-void loadTexturesMap1();
+/*void loadTexturesMap1();
 void loadTexturesOther();
 void loadSpritesMap1();
 void setSpriteTextureMap1();
-void setPosSpriteMap1();
+void setPosSpriteMap1();*/
 void tabbloc();
 void initMap1();
 
 int n=0;
+sf::Sprite bloc[27];
 
 /*sf::Texture grass1;
 sf::Texture grass2;

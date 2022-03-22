@@ -89,26 +89,26 @@ void tabbloc()
       return;
     }
   
-  sf::Sprite bloc[27];
+  //sf::Sprite bloc[27];
 
   while (n<21)
   {
     bloc[n].setTexture(grass1);
-    n+=1;
+    n=n+1;
   }
   n=0;
 
   while (n<2)
   {
     bloc[n+20].setTexture(grass2);
-    n+=1;
+    n=n+1;
   }
   n=0;
 
   while (n<3)
   {
     bloc[n+22].setTexture(grass3);
-    n+=1;
+    n=n+1;
   }
   n=0;
 
@@ -118,6 +118,7 @@ void tabbloc()
   while (n<27)
   {
     window.draw(bloc[n]);
+    n=n+1;
   }
 
 };

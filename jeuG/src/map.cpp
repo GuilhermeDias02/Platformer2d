@@ -18,7 +18,7 @@ void setBackgroundMap1()
   window.draw(background);
 }
 
-void loadTexturesMap1()
+/*void loadTexturesMap1()
 {
   sf::Texture grass1;
   if (!grass1.loadFromFile("../assets/blocterre.png"))
@@ -28,7 +28,7 @@ void loadTexturesMap1()
     }
 
   sf::Texture grass2;
-  if (!grass2.loadFromFile("../assets/blocterre.png"))
+  if (!grass2.loadFromFile("../assets/blocterre2.png"))
     {
       printf("%s", "Failed to load grass2");
       return;
@@ -57,9 +57,72 @@ void loadTexturesOther()
       printf("%s", "Failed to load key");
       return;
     }
+};*/
+
+void tabbloc()
+{
+  sf::Texture grass1;
+  if (!grass1.loadFromFile("../assets/blocterre.png"))
+    {
+      printf("%s", "Failed to load grass");
+      return;
+    }
+
+  sf::Texture grass2;
+  if (!grass2.loadFromFile("../assets/blocterre2.png"))
+    {
+      printf("%s", "Failed to load grass2");
+      return;
+    }
+
+  sf::Texture grass3;
+  if (!grass3.loadFromFile("../assets/blocterre3.png"))
+    {
+      printf("%s", "Failed to load grass3");
+      return;
+    }
+
+  sf::Texture grass4;
+  if (!grass4.loadFromFile("../assets/blocterre4.png"))
+    {
+      printf("%s", "Failed to load grass4");
+      return;
+    }
+  
+  sf::Sprite bloc[27];
+
+  while (n<21)
+  {
+    bloc[n].setTexture(grass1);
+    n+=1;
+  }
+  n=0;
+
+  while (n<2)
+  {
+    bloc[n+20].setTexture(grass2);
+    n+=1;
+  }
+  n=0;
+
+  while (n<3)
+  {
+    bloc[n+22].setTexture(grass3);
+    n+=1;
+  }
+  n=0;
+
+  bloc[26].setTexture(grass4);
+    
+
+  while (n<27)
+  {
+    window.draw(bloc[n]);
+  }
+
 };
 
-void loadSpritesMap1()
+/*void loadSpritesMap1()
 {
   // 27/47max
   sf::Sprite bloc1;
@@ -93,7 +156,14 @@ void loadSpritesMap1()
 
 void setSpriteTextureMap1()
 {
-  bloc1.setTexture(grass1);
+   sf::Texture grass404;
+  if (!grass1.loadFromFile("../assets/blocterre.png"))
+    {
+      printf("%s", "Failed to load grass");
+      return;
+    }
+
+  bloc1.setTexture(grass404);
   bloc2.setTexture(grass1);
   bloc3.setTexture(grass1);
   bloc4.setTexture(grass3);
@@ -179,13 +249,14 @@ void setPosSpriteMap1()
   window.draw(bloc25);
   window.draw(bloc26);
   window.draw(bloc27);
-};
+};*/
 
 void initMap1()
 {
   setBackgroundMap1();
-  loadTexturesMap1();
+  /*loadTexturesMap1();
   loadSpritesMap1();
   setSpriteTextureMap1();
-  setPosSpriteMap1();
+  setPosSpriteMap1();*/
+  tabbloc();
 };

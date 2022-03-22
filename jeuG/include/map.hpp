@@ -7,9 +7,12 @@ void loadTexturesOther();
 void loadSpritesMap1();
 void setSpriteTextureMap1();
 void setPosSpriteMap1();
+void tabbloc();
 void initMap1();
 
-sf::Texture grass1;
+int n=0;
+
+/*sf::Texture grass1;
 sf::Texture grass2;
 sf::Texture grass3;
 sf::Texture grass4;
@@ -41,6 +44,6 @@ sf::Sprite bloc23;
 sf::Sprite bloc24;
 sf::Sprite bloc25;
 sf::Sprite bloc26;
-sf::Sprite bloc27;
+sf::Sprite bloc27;*/
 
 #endif

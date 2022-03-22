@@ -8,10 +8,12 @@ void loadSpritesMap1();
 void setSpriteTextureMap1();
 void setPosSpriteMap1();*/
 void tabbloc();
+void setposbloc();
 void initMap1();
 
 int n=0;
 sf::Sprite bloc[27];
+sf::Sprite key;
 
 /*sf::Texture grass1;
 sf::Texture grass2;

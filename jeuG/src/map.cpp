@@ -88,6 +88,17 @@ void tabbloc()
       printf("%s", "Failed to load grass4");
       return;
     }
+
+  sf::Texture keyT;
+  if (!keyT.loadFromFile("../assets/cle.png"))
+  {
+    printf("%s", "Failed to load keyT");
+    return;
+  }
+  key.setTexture(keyT);
+  key.setPosition(sf::Vector2f(1200.f, 560.f));
+  window.draw(key);
+
   
   //sf::Sprite bloc[27];
 
@@ -100,14 +111,14 @@ void tabbloc()
 
   while (n<2)
   {
-    bloc[n+20].setTexture(grass2);
+    bloc[n+21].setTexture(grass2);
     n=n+1;
   }
   n=0;
 
   while (n<3)
   {
-    bloc[n+22].setTexture(grass3);
+    bloc[n+23].setTexture(grass3);
     n=n+1;
   }
   n=0;
@@ -115,13 +126,60 @@ void tabbloc()
   bloc[26].setTexture(grass4);
     
 
+  /*while (n<27)
+  {
+    window.draw(bloc[n]);
+    n=n+1;
+  }*/
+
+/*};
+
+void setposbloc()
+{*/
+  n=0;
+  while (n<3)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80.f, 640.f));
+    n=n+1;
+  }
+
+  bloc[3].setPosition(sf::Vector2f(240.f, 560.f));
+  bloc[4].setPosition(sf::Vector2f(320.f, 640.f));
+  bloc[5].setPosition(sf::Vector2f(400.f, 480.f));
+
+  n=6;
+  while (n<12)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80.f, 640.f));
+    n=n+1;
+  }
+  
+  bloc[12].setPosition(sf::Vector2f(1120.f, 640.f));
+  bloc[13].setPosition(sf::Vector2f(1200.f, 640.f));
+  bloc[14].setPosition(sf::Vector2f(1040.f, 560.f));
+  bloc[15].setPosition(sf::Vector2f(960.f, 480.f));
+
+  n=16;
+  while (n<21)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80-720.f, 400.f));
+    n=n+1;
+  }
+
+  bloc[21].setPosition(sf::Vector2f(400.f, 560.f));
+  bloc[22].setPosition(sf::Vector2f(960.f, 560.f));
+  bloc[23].setPosition(sf::Vector2f(240.f, 640.f));
+  bloc[24].setPosition(sf::Vector2f(400.f, 640.f));
+  bloc[25].setPosition(sf::Vector2f(1040.f, 640.f));
+  bloc[26].setPosition(sf::Vector2f(960.f, 640.f));
+
+  n=0;
   while (n<27)
   {
     window.draw(bloc[n]);
     n=n+1;
   }
-
-};
+}
 
 /*void loadSpritesMap1()
 {
@@ -260,4 +318,5 @@ void initMap1()
   setSpriteTextureMap1();
   setPosSpriteMap1();*/
   tabbloc();
+  //setposbloc();
 };

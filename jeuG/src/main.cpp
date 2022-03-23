@@ -33,6 +33,7 @@ int main()
         window.clear();
         
         initMap1();
+        initMap2();
 
         //window.draw();
         window.display();

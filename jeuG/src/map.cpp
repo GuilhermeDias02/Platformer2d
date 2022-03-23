@@ -20,7 +20,7 @@ void setBackgroundMap1()
 
 void setKeyMap1()
 {
-  sf::Texture keyT;
+  //sf::Texture keyT;
   if (!keyT.loadFromFile("../assets/cle.png"))
   {
     printf("%s", "Failed to load keyT");
@@ -139,18 +139,26 @@ void setBackgroundMap2()
 {
   sf::Sprite background2;
   sf::Texture forest;
-  if (!forest.loadFromFile("../assets/forestplt2f.png"))
+  if (!forest.loadFromFile("../assets/forestplt2d.png"))
   {
     printf("%s", "Failed to load forest");
     return;
   }
+  forest.setSmooth(true);
   background2.setTexture(forest);
-  background2.setScale(sf::Vector2f(1.608f, 1.608f));
+  background2.setScale(sf::Vector2f(1.608040201f, 1.608040201f));
   window.draw(background2);
 }
 
-void setkeyMap2()
+void setKeyMap2()
 {
-  key.setPosition(sf::Vector2f(1200.f, 560.f));
+  key.setTexture(keyT);
+  key.setPosition(sf::Vector2f(1200.f, 160.f));
   window.draw(key);
+}
+
+void initMap2()
+{
+  setBackgroundMap2();
+  setKeyMap2();
 }

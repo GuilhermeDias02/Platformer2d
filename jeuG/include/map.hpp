@@ -15,5 +15,7 @@ int n=0;
 sf::Sprite bloc[27];
 sf::Sprite key;
 
+sf::Texture keyT;
+
 
 #endif

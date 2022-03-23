@@ -10,7 +10,6 @@ void setBackgroundMap1()
   sf::Texture sky;
   if (!sky.loadFromFile("../assets/cielplt2d.png"))
     {
-      printf("%s", "Failed to load sky");
       return;
     }
   background.setTexture(sky);
@@ -23,7 +22,6 @@ void setKeyMap1()
   //sf::Texture keyT;
   if (!keyT.loadFromFile("../assets/cle.png"))
   {
-    printf("%s", "Failed to load keyT");
     return;
   }
   key.setTexture(keyT);
@@ -33,31 +31,27 @@ void setKeyMap1()
 
 void setBlocMap1()
 {
-  sf::Texture grass1;
+  //sf::Texture grass1;
   if (!grass1.loadFromFile("../assets/blocterre.png"))
     {
-      printf("%s", "Failed to load grass");
       return;
     }
 
-  sf::Texture grass2;
+  //sf::Texture grass2;
   if (!grass2.loadFromFile("../assets/blocterre2.png"))
     {
-      printf("%s", "Failed to load grass2");
       return;
     }
 
-  sf::Texture grass3;
+  //sf::Texture grass3;
   if (!grass3.loadFromFile("../assets/blocterre3.png"))
     {
-      printf("%s", "Failed to load grass3");
       return;
     }
 
-  sf::Texture grass4;
+  //sf::Texture grass4;
   if (!grass4.loadFromFile("../assets/blocterre4.png"))
     {
-      printf("%s", "Failed to load grass4");
       return;
     }
 
@@ -141,7 +135,6 @@ void setBackgroundMap2()
   sf::Texture forest;
   if (!forest.loadFromFile("../assets/forestplt2d.png"))
   {
-    printf("%s", "Failed to load forest");
     return;
   }
   forest.setSmooth(true);
@@ -157,8 +150,61 @@ void setKeyMap2()
   window.draw(key);
 }
 
+void setBlocMap2()
+{
+  sf::Texture branch1;
+  if (!branch1.loadFromFile("../assets/bois1.png"))
+  {
+    return;
+  }
+
+  sf::Texture branch2;
+  if (!branch2.loadFromFile("../assets/bois2.png"))
+  {
+    return;
+  }
+
+  sf::Texture branch3;
+  if (!branch3.loadFromFile("../assets/bois3.png"))
+  {
+    return;
+  }
+
+  sf::Texture branch4;
+  if (!branch3.loadFromFile("../assets/bois4.png"))
+  {
+    return;
+  }
+
+  n=0;
+  while (n<10)
+  {
+    bloc[n].setTexture(branch1);
+    n=n+1;
+  }
+
+  bloc[10].setTexture(branch2);
+
+  n=0;
+  while (n<16)
+  {
+    bloc[n].setTexture(branch3);
+    n=n+1;
+  }
+
+  bloc[16].setTexture(branch4);
+
+  n=0;
+  while (n<10)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80.f, 160.f));
+    n=n+1;
+  }
+}
+
 void initMap2()
 {
   setBackgroundMap2();
   setKeyMap2();
+  setBlocMap2();
 }

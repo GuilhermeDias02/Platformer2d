@@ -2,14 +2,14 @@
 #define MAP_H_
 
 void setBackgroundMap1();
-/*void loadTexturesMap1();
-void loadTexturesOther();
-void loadSpritesMap1();
-void setSpriteTextureMap1();
-void setPosSpriteMap1();*/
-void tabbloc();
-void setposbloc();
+void setKeyMap1();
+void setBlocMap1();
 void initMap1();
+
+void setBackgroundMap2();
+void setKeyMap2();
+void setBlocmap2();
+void initMap2();
 
 int n=0;
 sf::Sprite bloc[27];

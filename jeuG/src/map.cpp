@@ -18,7 +18,20 @@ void setBackgroundMap1()
   window.draw(background);
 }
 
-void tabbloc()
+void setKeyMap1()
+{
+  sf::Texture keyT;
+  if (!keyT.loadFromFile("../assets/cle.png"))
+  {
+    printf("%s", "Failed to load keyT");
+    return;
+  }
+  key.setTexture(keyT);
+  key.setPosition(sf::Vector2f(1200.f, 560.f));
+  window.draw(key);
+}
+
+void setBlocMap1()
 {
   sf::Texture grass1;
   if (!grass1.loadFromFile("../assets/blocterre.png"))
@@ -47,19 +60,6 @@ void tabbloc()
       printf("%s", "Failed to load grass4");
       return;
     }
-
-  sf::Texture keyT;
-  if (!keyT.loadFromFile("../assets/cle.png"))
-  {
-    printf("%s", "Failed to load keyT");
-    return;
-  }
-  key.setTexture(keyT);
-  key.setPosition(sf::Vector2f(1200.f, 560.f));
-  window.draw(key);
-
-  
-  //sf::Sprite bloc[27];
 
   while (n<21)
   {
@@ -128,9 +128,29 @@ void tabbloc()
   }
 }
 
-
 void initMap1()
 {
   setBackgroundMap1();
-  tabbloc();
-};
+  setKeyMap1();
+  setBlocMap1();
+}
+
+void setBackgroundMap2()
+{
+  sf::Sprite background2;
+  sf::Texture forest;
+  if (!forest.loadFromFile("../assets/forestplt2f.png"))
+  {
+    printf("%s", "Failed to load forest");
+    return;
+  }
+  background2.setTexture(forest);
+  background2.setScale(sf::Vector2f(1.608f, 1.608f));
+  window.draw(background2);
+}
+
+void setkeyMap2()
+{
+  key.setPosition(sf::Vector2f(1200.f, 560.f));
+  window.draw(key);
+}

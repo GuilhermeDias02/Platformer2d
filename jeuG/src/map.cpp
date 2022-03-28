@@ -31,25 +31,21 @@ void setKeyMap1()
 
 void setBlocMap1()
 {
-  //sf::Texture grass1;
   if (!grass1.loadFromFile("../assets/blocterre.png"))
     {
       return;
     }
 
-  //sf::Texture grass2;
   if (!grass2.loadFromFile("../assets/blocterre2.png"))
     {
       return;
     }
 
-  //sf::Texture grass3;
   if (!grass3.loadFromFile("../assets/blocterre3.png"))
     {
       return;
     }
 
-  //sf::Texture grass4;
   if (!grass4.loadFromFile("../assets/blocterre4.png"))
     {
       return;
@@ -152,52 +148,73 @@ void setKeyMap2()
 
 void setBlocMap2()
 {
-  sf::Texture branch1;
   if (!branch1.loadFromFile("../assets/bois1.png"))
   {
     return;
   }
 
-  sf::Texture branch2;
   if (!branch2.loadFromFile("../assets/bois2.png"))
   {
     return;
   }
 
-  sf::Texture branch3;
   if (!branch3.loadFromFile("../assets/bois3.png"))
   {
     return;
   }
 
-  sf::Texture branch4;
-  if (!branch3.loadFromFile("../assets/bois4.png"))
+  if (!branch4.loadFromFile("../assets/bois4.png"))
   {
     return;
   }
 
   n=0;
-  while (n<10)
+  while (n<9)
   {
     bloc[n].setTexture(branch1);
     n=n+1;
   }
 
-  bloc[10].setTexture(branch2);
+  bloc[9].setTexture(branch2);
 
-  n=0;
-  while (n<16)
+  n=10;
+  while (n<15)
   {
     bloc[n].setTexture(branch3);
     n=n+1;
   }
 
-  bloc[16].setTexture(branch4);
+  bloc[15].setTexture(branch4);
 
   n=0;
-  while (n<10)
+  while (n<3)
   {
     bloc[n].setPosition(sf::Vector2f(n*80.f, 160.f));
+    n=n+1;
+  }
+
+  bloc[9].setPosition(sf::Vector2f(240.f, 160.f));
+
+  n=3;
+  while (n<9)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80-240.f, 400.f));
+    n=n+1;
+  }
+
+  n=10;
+  while (n<15)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80+80.f, 240.f));
+    n=n+1;
+  }
+
+  bloc[15].setPosition(sf::Vector2f(800.f, 240.f));
+
+  n=0;
+  while (n<31)
+  {
+    window.draw(bloc[n]);
     n=n+1;
   }
 }

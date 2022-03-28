@@ -16,9 +16,15 @@ sf::Sprite bloc[30];
 sf::Sprite key;
 
 sf::Texture keyT;
+
 sf::Texture grass1;
 sf::Texture grass2;
 sf::Texture grass3;
 sf::Texture grass4;
+
+sf::Texture branch1;
+sf::Texture branch2;
+sf::Texture branch3;
+sf::Texture branch4;
 
 #endif

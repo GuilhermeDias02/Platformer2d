@@ -186,6 +186,13 @@ void setBlocMap2()
 
   bloc[15].setTexture(branch4);
 
+  n=16;
+  while (n<30)
+  {
+    bloc[n].setTexture(grass1);
+    n=n+1;
+  }
+
   n=0;
   while (n<3)
   {
@@ -211,8 +218,29 @@ void setBlocMap2()
 
   bloc[15].setPosition(sf::Vector2f(800.f, 240.f));
 
+  n=16;
+  while (n<20)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80-1280.f, 640.f));
+    n=n+1;
+  }
+
+  n=20;
+  while (n<25)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80-1200.f, 640.f));
+    n=n+1;
+  }
+
+  n=25;
+  while (n<30)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80-1120.f, 640.f));
+    n=n+1;
+  }
+
   n=0;
-  while (n<31)
+  while (n<30)
   {
     window.draw(bloc[n]);
     n=n+1;

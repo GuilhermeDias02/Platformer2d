@@ -168,6 +168,16 @@ void setBlocMap2()
     return;
   }
 
+  if (!waterT.loadFromFile("../assets/blocDeau.png"))
+  {
+    return;
+  }
+
+  if (!sapT.loadFromFile("../assets/seve.png"))
+  {
+    return;
+  }
+
   n=0;
   while (n<9)
   {
@@ -190,6 +200,15 @@ void setBlocMap2()
   while (n<30)
   {
     bloc[n].setTexture(grass1);
+    n=n+1;
+  }
+
+  water.setTexture(waterT);
+
+  n=0;
+  while (n<4)
+  {
+    sap[n].setTexture(sapT);
     n=n+1;
   }
 
@@ -236,6 +255,24 @@ void setBlocMap2()
   while (n<30)
   {
     bloc[n].setPosition(sf::Vector2f(n*80-1120.f, 640.f));
+    n=n+1;
+  }
+
+  water.setPosition(sf::Vector2f(320.f, 640.f));
+
+  n=0;
+  while (n<4)
+  {
+    sap[n].setPosition(sf::Vector2f(n*80+480.f, 400.f));
+    n=n+1;
+  }
+
+  window.draw(water);
+
+  n=0;
+  while (n<4)
+  {
+    window.draw(sap[n]);
     n=n+1;
   }
 

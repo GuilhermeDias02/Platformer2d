@@ -14,6 +14,8 @@ void initMap2();
 int n=0;
 sf::Sprite bloc[30];
 sf::Sprite key;
+sf::Sprite water;
+sf::Sprite sap[4];
 
 sf::Texture keyT;
 
@@ -26,5 +28,7 @@ sf::Texture branch1;
 sf::Texture branch2;
 sf::Texture branch3;
 sf::Texture branch4;
+sf::Texture waterT;
+sf::Texture sapT;
 
 #endif

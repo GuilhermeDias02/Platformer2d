@@ -154,6 +154,13 @@ void setBackgroundMap2()
   window.draw(background2);
 }
 
+void setDoorMap2()
+{
+  door.setPosition(sf::Vector2f(0.f, 480.f));
+
+  window.draw(door);
+}
+
 void setKeyMap2()
 {
   key.setTexture(keyT);
@@ -302,6 +309,7 @@ void setBlocMap2()
 void initMap2()
 {
   setBackgroundMap2();
+  setDoorMap2();
   setKeyMap2();
   setBlocMap2();
 }

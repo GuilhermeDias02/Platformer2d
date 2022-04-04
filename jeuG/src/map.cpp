@@ -163,7 +163,6 @@ void setDoorMap2()
 
 void setKeyMap2()
 {
-  key.setTexture(keyT);
   key.setPosition(sf::Vector2f(1200.f, 160.f));
   window.draw(key);
 }
@@ -312,4 +311,60 @@ void initMap2()
   setDoorMap2();
   setKeyMap2();
   setBlocMap2();
+}
+
+void BackgroundMap3()
+{
+  sf::Sprite background3;
+  sf::Texture cave;
+  if (!cave.loadFromFile("../assets/grotte.jpg"))
+    {
+      return;
+    }
+  background3.setTexture(cave);
+
+  window.draw(background3);
+}
+
+void setDoorMap3()
+{
+  door.setPosition(sf::Vector2f(1200.f, 480.f));
+
+  window.draw(door);
+}
+
+void setKeyMap3()
+{
+  key.setPosition(sf::Vector2f(80.f, 480.f));
+  window.draw(key);
+}
+
+void setBlocMap3()
+{
+  if (!rock.loadFromFile("../assets/roche.png"))
+  {
+    return;
+  }
+
+  n=0;
+  while (n<50)
+  {
+    bloc[n].setTexture(rock);
+    n=n+1;
+  }
+
+  n=0;
+  while (n<16)
+  {
+    bloc[n].setPosition(sf::Vector2f(n*80.f, 0.f));
+    n=n+1;
+  }
+}
+
+void initMap3()
+{
+  BackgroundMap3();
+  setDoorMap3();
+  setKeyMap3();
+  setBlocMap3();
 }

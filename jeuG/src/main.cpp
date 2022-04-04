@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <stdio.h>
+#include <iostream>
 #include "../include/main.hpp"
 //#include "move.cpp"
 //#include "../include/move.hpp"
@@ -8,7 +9,6 @@
 
 int main()
 {
-    //sf::RenderWindow window(sf::VideoMode(1280, 720), "Platformer2d");
     window.setFramerateLimit(60);
     window.setVerticalSyncEnabled(false);
 
@@ -35,7 +35,6 @@ int main()
         initMap1();
         initMap2();
 
-        //window.draw();
         window.display();
     }
 

@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <stdio.h>
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "../include/main.hpp"
 #include "../include/map.hpp"
@@ -17,9 +18,22 @@ void setBackgroundMap1()
   window.draw(background);
 }
 
+void setDoorMap1()
+{
+  if (!doorT.loadFromFile("../assets/porte.png"))
+  {
+    return;
+  }
+
+  door.setTexture(doorT);
+
+  door.setPosition(sf::Vector2f(800.f, 480.f));
+
+  window.draw(door);
+}
+
 void setKeyMap1()
 {
-  //sf::Texture keyT;
   if (!keyT.loadFromFile("../assets/cle.png"))
   {
     return;
@@ -121,6 +135,7 @@ void setBlocMap1()
 void initMap1()
 {
   setBackgroundMap1();
+  setDoorMap1();
   setKeyMap1();
   setBlocMap1();
 }

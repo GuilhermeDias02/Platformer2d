@@ -16,8 +16,10 @@ sf::Sprite bloc[30];
 sf::Sprite key;
 sf::Sprite water;
 sf::Sprite sap[4];
+sf::Sprite door;
 
 sf::Texture keyT;
+sf::Texture doorT;
 
 sf::Texture grass1;
 sf::Texture grass2;

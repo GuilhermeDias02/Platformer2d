@@ -317,11 +317,13 @@ void BackgroundMap3()
 {
   sf::Sprite background3;
   sf::Texture cave;
-  if (!cave.loadFromFile("../assets/grotte.jpg"))
+  if (!cave.loadFromFile("../assets/grotteplt2d.jpg"))
     {
       return;
     }
+  cave.setSmooth(false);
   background3.setTexture(cave);
+  background3.setScale(sf::Vector2f(1.25f, 0.703125f));
 
   window.draw(background3);
 }
@@ -357,6 +359,27 @@ void setBlocMap3()
   while (n<16)
   {
     bloc[n].setPosition(sf::Vector2f(n*80.f, 0.f));
+    n=n+1;
+  }
+
+  n=0;
+  while (n<8)
+  {
+    bloc[n+16].setPosition(sf::Vector2f(0.f, n*80.f));
+    n=n+1;
+  }
+
+  n=0;
+  while (n<3)
+  {
+    bloc[n+23].setPosition(sf::Vector2f(n*80+80.f, 640.f));
+    n=n+1;
+  }
+
+  n=0;
+  while (n<50)
+  {
+    window.draw(bloc[n]);
     n=n+1;
   }
 }

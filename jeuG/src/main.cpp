@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <iostream>
 #include "../include/main.hpp"
-//#include "move.cpp"
-//#include "../include/move.hpp"
 #include "map.cpp"
 #include "../include/map.hpp"
 
@@ -34,6 +32,7 @@ int main()
         
         initMap1();
         initMap2();
+        initMap3();
 
         window.display();
     }

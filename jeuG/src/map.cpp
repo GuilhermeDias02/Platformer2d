@@ -376,7 +376,28 @@ void setBlocMap3()
     n=n+1;
   }
 
-  
+  n=0;
+  while (n<6)
+  {
+    bloc[n+26].setPosition(sf::Vector2f(n*80+80.f, 80.f));
+    n=n+1;
+  }
+
+  bloc[32].setPosition(sf::Vector2f(80.f, 160.f));
+
+  n=0;
+  while (n<11)
+  {
+    bloc[n+33].setPosition(sf::Vector2f(n*80+480, 640.f));
+    n=n+1;
+  }
+
+  n=0;
+  while (n<6)
+  {
+    bloc[n+44].setPosition(sf::Vector2f(1200.f, n*80.f));
+    n=n+1;
+  }
 
   n=0;
   while (n<50)

@@ -25,6 +25,7 @@ sf::Sprite key;
 sf::Sprite water;
 sf::Sprite sap[4];
 sf::Sprite door;
+sf::Sprite echelle[5];
 
 sf::Texture keyT;
 sf::Texture doorT;
@@ -42,5 +43,6 @@ sf::Texture waterT;
 sf::Texture sapT;
 
 sf::Texture rock;
+sf::Texture echelleT;
 
 #endif

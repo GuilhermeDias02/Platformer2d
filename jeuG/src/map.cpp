@@ -343,9 +343,21 @@ void setKeyMap3()
 
 void setBlocMap3()
 {
-  if (!rock.loadFromFile("../assets/roche.png"))
+  if (!rock.loadFromFile("../assets/roche(1).png"))
   {
     return;
+  }
+
+  if (!echelleT.loadFromFile("../assets/echelle.png"))
+  {
+    return;
+  }
+
+  n=0;
+  while (n<5)
+  {
+    echelle[n].setTexture(echelleT);
+    n=n+1;
   }
 
   n=0;
@@ -396,6 +408,14 @@ void setBlocMap3()
   while (n<6)
   {
     bloc[n+44].setPosition(sf::Vector2f(1200.f, n*80.f));
+    n=n+1;
+  }
+
+  n=0;
+  while (n<5)
+  {
+    echelle[n].setPosition(sf::Vector2f(1040.f, n*80+240.f));
+    window.draw(echelle[n]);
     n=n+1;
   }
 

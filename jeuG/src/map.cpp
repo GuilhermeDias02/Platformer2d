@@ -353,6 +353,11 @@ void setBlocMap3()
     return;
   }
 
+  if (!stalactiteT.loadFromFile("../assets/stalactite.png"))
+  {
+    return;
+  }
+
   n=0;
   while (n<5)
   {
@@ -364,6 +369,13 @@ void setBlocMap3()
   while (n<50)
   {
     bloc[n].setTexture(rock);
+    n=n+1;
+  }
+
+  n=0;
+  while (n<2)
+  {
+    stalactite[n].setTexture(stalactiteT);
     n=n+1;
   }
 
@@ -416,6 +428,14 @@ void setBlocMap3()
   {
     echelle[n].setPosition(sf::Vector2f(1040.f, n*80+240.f));
     window.draw(echelle[n]);
+    n=n+1;
+  }
+
+  n=0;
+  while (n<2)
+  {
+    stalactite[n].setPosition(sf::Vector2f(n*80+560.f, 80.f));
+    window.draw(stalactite[n]);
     n=n+1;
   }
 

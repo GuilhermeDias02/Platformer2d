@@ -26,6 +26,7 @@ sf::Sprite water;
 sf::Sprite sap[4];
 sf::Sprite door;
 sf::Sprite echelle[5];
+sf::Sprite stalactite[2]; 
 
 sf::Texture keyT;
 sf::Texture doorT;
@@ -44,5 +45,6 @@ sf::Texture sapT;
 
 sf::Texture rock;
 sf::Texture echelleT;
+sf::Texture stalactiteT;
 
 #endif

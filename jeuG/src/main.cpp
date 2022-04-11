@@ -21,14 +21,7 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
-        }
-
-        
-	    
-	
-	//fonction mouvement gauche
-	//fonction mouv droite
-	//fonction mouv saut
+        }   
 
         window.clear();
         

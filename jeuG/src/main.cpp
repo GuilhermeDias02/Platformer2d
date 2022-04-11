@@ -11,7 +11,7 @@ int main()
 {
     window.setFramerateLimit(60);
     window.setVerticalSyncEnabled(false);
-
+    perso();
     
 
     while (window.isOpen())
@@ -36,17 +36,9 @@ int main()
         initMap2();
         initMap3();
 
-        perso();
         move();
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-        {
-            t0.restart();
-        }
-        jump();
-
         window.draw(shape);
-
         window.display();
     }
 

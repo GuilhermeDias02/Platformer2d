@@ -2,8 +2,10 @@
 #include <stdio.h>
 #include <iostream>
 #include "../include/main.hpp"
-#include "map.cpp"
 #include "../include/map.hpp"
+#include "map.cpp"
+#include "../include/jump.hpp"
+#include "jump.cpp"
 
 int main()
 {
@@ -33,6 +35,17 @@ int main()
         initMap1();
         initMap2();
         initMap3();
+
+        perso();
+        move();
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+        {
+            t0.restart();
+        }
+        jump();
+
+        window.draw(shape);
 
         window.display();
     }

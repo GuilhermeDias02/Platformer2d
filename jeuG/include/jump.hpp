@@ -8,7 +8,7 @@ void gravity();
 void jumping();
 void jump();
 
-sf::CircleShape shape(40.f);
+sf::RectangleShape shape(sf::Vector2f(80.f, 80.f));
 sf::Vector2f velocity;
 sf::Vector2f position;
 bool collision;

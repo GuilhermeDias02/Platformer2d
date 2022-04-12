@@ -14,19 +14,14 @@ void perso()
 
 void colision()
 {
-    n=0;
-    while (n<50)
+    if (/*shape.getPosition() != bloc[].getPosition() ||*/ shape.getPosition().x >= 0 || shape.getPosition().x+shape.getSize().x <= 1280 || shape.getPosition().y >= 0 || shape.getPosition().y+shape.getSize().y <= 720)
     {
-        if (shape.getPosition() != bloc[n].getPosition())
-        {
             collision = false;
-        }
+    }
 
-        if (shape.getPosition() == bloc[n].getPosition() || shape.getPosition().x < 0 || shape.getPosition().x > 1200 || shape.getPosition().y < 0 || shape.getPosition().y > 640)
-        {
-            collision = true;
-        }
-        n=n+1;
+    if (/*shape.getPosition() != bloc[].getPosition() ||*/ shape.getPosition().x < 0 || shape.getPosition().x+shape.getSize().x > 1280 || shape.getPosition().y < 0 || shape.getPosition().y+shape.getSize().y > 720)
+    {
+        collision = true;
     }
 }
 
@@ -38,6 +33,13 @@ void move()
         if (collision == false)
         {
             shape.move(20.f, 0.f);
+            colision();
+        }
+
+        if (collision == true)
+        {
+            shape.setPosition(shape.getPosition().x-20, shape.getPosition().y);//on rajoute -(la vitesse)
+            colision();
         }
     }
 
@@ -47,6 +49,13 @@ void move()
         if (collision == false)
         {
             shape.move(-20.f, 0.f);
+            colision();
+        }
+
+        if (collision == true)
+        {
+            shape.setPosition(shape.getPosition().x+20, shape.getPosition().y);//on rajoute -(la vitesse)
+            colision();
         }
     }
 
@@ -56,6 +65,13 @@ void move()
         if (collision == false)
         {
             shape.move(0.f, 20.f);
+            colision();
+        }
+
+        if (collision == true)
+        {
+            shape.setPosition(shape.getPosition().x, shape.getPosition().y-20);//on rajoute -(la vitesse)
+            colision();
         }
     }
 
@@ -65,6 +81,13 @@ void move()
         if (collision == false)
         {
             shape.move(0.f, -20.f);
+            colision();
+        }
+
+        if (collision == true)
+        {
+            shape.setPosition(shape.getPosition().x, shape.getPosition().y+20);//on rajoute -(la vitesse)
+            colision();
         }
     }
 }

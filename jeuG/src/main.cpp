@@ -4,15 +4,14 @@
 #include "../include/main.hpp"
 #include "../include/map.hpp"
 #include "map.cpp"
-#include "../include/jump.hpp"
-#include "jump.cpp"
+#include "../include/collision.hpp"
+#include "collision.cpp"
 
 int main()
 {
     window.setFramerateLimit(60);
     window.setVerticalSyncEnabled(false);
     perso();
-    
 
     while (window.isOpen())
     {

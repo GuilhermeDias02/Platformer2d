@@ -4,6 +4,9 @@
 void perso();
 void move();
 void colision();//fonction colision != variable collision
+void colisionMap1();
+void colisionMap2();
+void colisionMap3();
 void gravity();
 void jumping();
 void jump();

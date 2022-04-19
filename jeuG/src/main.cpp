@@ -25,8 +25,9 @@ int main()
         window.clear();
 
         initMap1();
-        initMap2();
-        initMap3();
+        colisionMap1();
+        /*initMap2();
+        initMap3();*/
 
         colision();
 

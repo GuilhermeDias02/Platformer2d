@@ -25,6 +25,38 @@ void colision()
     }
 }
 
+void colisionMap1()
+{
+    if (shape.getPosition().y+shape.getSize().y > 1200)
+    {
+        collision = true;
+    }
+    else if (shape.getPosition().x+shape.getSize().x > 240 && shape.getPosition().x < 320 && shape.getPosition().y+shape.getSize().y < 1120)
+    {
+        collision = true;
+    }
+    else if (shape.getPosition().x+shape.getSize().x > 400 && shape.getPosition().x+shape.getSize().x < 480 && shape.getPosition().x < 480 && shape.getPosition().y < 1040)
+    {
+        collision = true;
+    }
+    else if (shape.getPosition().x+shape.getSize().x > 540 && shape.getPosition().x < 960 && shape.getPosition().y+shape.getPosition().y < 940 && shape.getPosition().y > 1040)
+    {
+        collision = true;
+    }
+    else if (shape.getPosition().x+shape.getSize().x > 960 && shape.getPosition().x < 1040 && shape.getPosition().y+shape.getSize().y < 1040)
+    {
+        collision =true;
+    }
+    else if (shape.getPosition().x+shape.getSize().x > 1040 && shape.getPosition().x < 1120 && shape.getPosition().y+shape.getSize().y < 1120)
+    {
+        collision = true;
+    }
+    else
+    {
+        collision = false;
+    }
+}
+
 void move()
 {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))

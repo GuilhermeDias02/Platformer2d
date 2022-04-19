@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "../include/main.hpp"
 #include "../include/map.hpp"
+#include "../include/collision.hpp"
 
 void setBackgroundMap1()
 {

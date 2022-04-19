@@ -13,6 +13,8 @@ int main()
     window.setVerticalSyncEnabled(false);
     perso();
 
+    map = 1;
+
     while (window.isOpen())
     {
         sf::Event event;

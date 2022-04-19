@@ -72,6 +72,53 @@ void colisionMap1()
     }
 }
 
+void colisionMap2()
+{
+    if (shape.getPosition().y+shape.getSize().y > 640 && shape.getPosition().x < 320)
+    {
+        collisionMap1 = true;
+    }
+    else
+    {
+        if (shape.getPosition().x+shape.getSize().x > 400 && shape.getPosition().y+shape.getSize().y >640 && shape.getPosition().x < 800)
+        {
+            collisionMap1 = true;
+        }
+        else
+        {
+            if (shape.getPosition().x+shape.getPosition().x > 880 && shape.getPosition().y+shape.getSize().y > 640)
+            {
+                collisionMap1 = true;
+            }
+            else
+            {
+                if (shape.getPosition().x < 800 && shape.getPosition().y+shape.getSize().y >400 && shape.getPosition().y < 480)
+                {
+                    collisionMap1 = true;
+                }
+                else
+                {
+                    if (shape.getPosition().x+shape.getPosition().x > 880 && shape.getPosition().y+shape.getPosition().y+shape.getSize().y > 240 && shape.getPosition().y < 320)
+                    {
+                        collisionMap1 =true;
+                    }
+                    else
+                    {
+                        if (shape.getPosition().x < 320 && shape.getPosition().y+shape.getSize().y > 160 && shape.getPosition().y < 240)
+                        {
+                            collisionMap1 = true;
+                        }
+                        else
+                        {
+                            collisionMap1 = false;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 void move()
 {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))

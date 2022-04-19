@@ -24,14 +24,31 @@ int main()
 
         window.clear();
 
-        initMap1();
-        colisionMap1();
+        if (map == 1)
+        {
+            initMap1();
+            colisionMap1();
+        }
+        else if (map == 2)
+        {
+            initMap2();
+            colisionMap2();
+        }
+        else if (map == 3)
+        {
+            initMap3();
+            colisionMap3();
+        }
+        
         /*initMap2();
         initMap3();*/
 
         colision();
 
         move();
+
+        /*std::cout << shape.getPosition().x << std::endl;
+        std::cout << shape.getPosition().y << std::endl;*/
 
         window.draw(shape);
         window.display();

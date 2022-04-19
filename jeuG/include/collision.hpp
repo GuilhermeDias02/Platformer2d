@@ -15,5 +15,6 @@ sf::RectangleShape shape(sf::Vector2f(80.f, 80.f));
 sf::Vector2f velocity;
 sf::Vector2f position;
 bool collision;
+bool collisionMap1;
 
 #endif

@@ -1,0 +1,20 @@
+#include <iostream>
+#include "jeu.hpp"
+
+
+int main()
+{
+  bool menua = true;
+    Game game;
+
+    while (game.getWindow().isOpen())
+    {
+      if(!menua)
+        game.update();
+
+	if(menua)
+	  game.render();
+    }
+
+    return 0;
+}

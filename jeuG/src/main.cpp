@@ -12,7 +12,7 @@ int main()
     window.setFramerateLimit(60);
     window.setVerticalSyncEnabled(false);
 
-    map = 2;    
+    map = 3;    
     
     perso();
 
@@ -51,8 +51,8 @@ int main()
 
         move();
 
-        /*std::cout << shape.getPosition().x << std::endl;
-        std::cout << shape.getPosition().y << std::endl;*/
+        /*std::cout << "position du bloc en x = " << shape.getPosition().x << std::endl;
+        std::cout << "position du bloc en y = " << shape.getPosition().y << std::endl;*/
 
         window.draw(shape);
         window.display();

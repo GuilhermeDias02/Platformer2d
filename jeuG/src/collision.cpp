@@ -97,7 +97,7 @@ void colisionMap2()
         }
         else
         {
-            if (shape.getPosition().x+shape.getPosition().x > 880 && shape.getPosition().y+shape.getSize().y > 640)//en bas à droite
+            if (shape.getPosition().x+shape.getSize().x > 880 && shape.getPosition().y+shape.getSize().y > 640)//en bas à droite
             {
                 collisionMap2 = true;
             }
@@ -138,7 +138,7 @@ void colisionMap3()
     }
     else
     {
-        if (shape.getPosition().x+shape.getSize().x > 480 && shape.getPosition().y > 640)//en bas à droite
+        if (shape.getPosition().x+shape.getSize().x > 480 && shape.getPosition().y+shape.getSize().y > 640)//en bas à droite
         {
             collisionMap3 = true;
         }
@@ -174,7 +174,14 @@ void colisionMap3()
                             }
                             else
                             {
-                                collisionMap3 = false;
+                                if (shape.getPosition().x+shape.getSize().x > 1060 && shape.getPosition().x < 1120 && shape.getPosition().y+shape.getSize().y > 240)
+                                {
+                                    collisionMap3 = true;
+                                }
+                                else
+                                {
+                                    collisionMap3 = false;
+                                }
                             }
                         }
                     }

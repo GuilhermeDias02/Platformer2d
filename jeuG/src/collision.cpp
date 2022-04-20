@@ -9,7 +9,18 @@
 void perso()
 {
     shape.setFillColor(sf::Color(100, 250, 50));
-    shape.setPosition(sf::Vector2f(160.f, 480.f));
+    if (map == 1)
+        {
+            shape.setPosition(sf::Vector2f(80.f, 560.f));
+        }
+        else if (map == 2)
+        {
+            shape.setPosition(sf::Vector2f(80.f, 80.f));
+        }
+        else if (map == 3)
+        {
+            shape.setPosition(sf::Vector2f(80.f, 560.f));
+        }
 }
 
 void colision()
@@ -27,37 +38,37 @@ void colision()
 
 void colisionMap1()
 {
-    if (shape.getPosition().y+shape.getSize().y > 640)
+    if (shape.getPosition().y+shape.getSize().y > 640)//sol
     {
         collisionMap1 = true;
     }
     else
     {
-        if (shape.getPosition().x+shape.getSize().x > 240 && shape.getPosition().x < 320 && shape.getPosition().y+shape.getSize().y > 560)
+        if (shape.getPosition().x+shape.getSize().x > 240 && shape.getPosition().x < 320 && shape.getPosition().y+shape.getSize().y > 560)//petit cube
         {
             collisionMap1 = true;
         }
         else
         {
-            if (shape.getPosition().x+shape.getSize().x > 400 && shape.getPosition().x < 480 && shape.getPosition().y+shape.getSize().y > 480)
+            if (shape.getPosition().x+shape.getSize().x > 400 && shape.getPosition().x < 480 && shape.getPosition().y+shape.getSize().y > 480)//double cube
             {
                 collisionMap1 = true;
             }
             else
             {
-                if (shape.getPosition().x+shape.getSize().x > 560 && shape.getPosition().x < 960 && shape.getPosition().y+shape.getSize().y > 400 && shape.getPosition().y < 480)
+                if (shape.getPosition().x+shape.getSize().x > 560 && shape.getPosition().x < 960 && shape.getPosition().y+shape.getSize().y > 400 && shape.getPosition().y < 480)//grande plateforme
                 {
                     collisionMap1 = true;
                 }
                 else
                 {
-                    if (shape.getPosition().x+shape.getSize().x > 960 && shape.getPosition().x < 1040 && shape.getPosition().y+shape.getSize().y > 480)
+                    if (shape.getPosition().x+shape.getSize().x > 960 && shape.getPosition().x < 1040 && shape.getPosition().y+shape.getSize().y > 480)//deuxième marche
                     {
                         collisionMap1 =true;
                     }
                     else
                     {
-                        if (shape.getPosition().x+shape.getSize().x > 1040 && shape.getPosition().x < 1120 && shape.getPosition().y+shape.getSize().y > 560)
+                        if (shape.getPosition().x+shape.getSize().x > 1040 && shape.getPosition().x < 1120 && shape.getPosition().y+shape.getSize().y > 560)//première marche
                         {
                             collisionMap1 = true;
                         }
@@ -74,37 +85,37 @@ void colisionMap1()
 
 void colisionMap2()
 {
-    if (shape.getPosition().y+shape.getSize().y > 640 && shape.getPosition().x < 320)
+    if (shape.getPosition().y+shape.getSize().y > 640 && shape.getPosition().x < 320)//en bas à gauche
     {
         collisionMap2 = true;
     }
     else
     {
-        if (shape.getPosition().x+shape.getSize().x > 400 && shape.getPosition().y+shape.getSize().y >640 && shape.getPosition().x < 800)
+        if (shape.getPosition().x+shape.getSize().x > 400 && shape.getPosition().y+shape.getSize().y >640 && shape.getPosition().x < 800)//au milieu à gauche
         {
             collisionMap2 = true;
         }
         else
         {
-            if (shape.getPosition().x+shape.getPosition().x > 880 && shape.getPosition().y+shape.getSize().y > 640)
+            if (shape.getPosition().x+shape.getPosition().x > 880 && shape.getPosition().y+shape.getSize().y > 640)//en bas à droite
             {
                 collisionMap2 = true;
             }
             else
             {
-                if (shape.getPosition().x < 800 && shape.getPosition().y+shape.getSize().y >400 && shape.getPosition().y < 480)
+                if (shape.getPosition().x < 800 && shape.getPosition().y+shape.getSize().y >400 && shape.getPosition().y < 460)//branche basse
                 {
                     collisionMap2 = true;
                 }
                 else
                 {
-                    if (shape.getPosition().x+shape.getPosition().x > 880 && shape.getPosition().y+shape.getPosition().y+shape.getSize().y > 240 && shape.getPosition().y < 320)
+                    if (shape.getPosition().x+shape.getSize().x > 800 && shape.getPosition().y+shape.getSize().y > 240 && shape.getPosition().y < 300)//branche à droite
                     {
                         collisionMap2 =true;
                     }
                     else
                     {
-                        if (shape.getPosition().x < 320 && shape.getPosition().y+shape.getSize().y > 160 && shape.getPosition().y < 240)
+                        if (shape.getPosition().x < 320 && shape.getPosition().y+shape.getSize().y > 160 && shape.getPosition().y < 220)//branche haute
                         {
                             collisionMap2 = true;
                         }
@@ -121,43 +132,50 @@ void colisionMap2()
 
 void colisionMap3()
 {
-    if (shape.getPosition().y+shape.getSize().y > 640 && shape.getPosition().x < 320)
+    if (shape.getPosition().y+shape.getSize().y > 640 && shape.getPosition().x < 320)//en bas à gauche
     {
         collisionMap3 = true;
     }
     else
     {
-        if (shape.getPosition().x+shape.getSize().x > 480 && shape.getPosition().y > 640)
+        if (shape.getPosition().x+shape.getSize().x > 480 && shape.getPosition().y > 640)//en bas à droite
         {
             collisionMap3 = true;
         }
         else
         {
-            if (shape.getPosition().x+shape.getPosition().x > 880 && shape.getPosition().y+shape.getSize().y > 640)
+            if (shape.getPosition().x < 80)//tout le mur à gauche
             {
                 collisionMap3 = true;
             }
             else
             {
-                if (shape.getPosition().x < 800 && shape.getPosition().y+shape.getSize().y >400 && shape.getPosition().y < 480)
+                if (shape.getPosition().y < 80)//tout le toit de la grotte
                 {
                     collisionMap3 = true;
                 }
                 else
                 {
-                    if (shape.getPosition().x+shape.getPosition().x > 880 && shape.getPosition().y+shape.getPosition().y+shape.getSize().y > 240 && shape.getPosition().y < 320)
+                    if (shape.getPosition().y < 480 && shape.getPosition().x+shape.getSize().x > 1200)//mur à droite
                     {
                         collisionMap3 =true;
                     }
                     else
                     {
-                        if (shape.getPosition().x < 320 && shape.getPosition().y+shape.getSize().y > 160 && shape.getPosition().y < 240)
+                        if (shape.getPosition().x < 160 && shape.getPosition().y < 240)//bloc seul à gauche
                         {
                             collisionMap3 = true;
                         }
                         else
                         {
-                            collisionMap3 = false;
+                            if (shape.getPosition().x < 560 && shape.getPosition().y < 160)//à gauche de la chute de stalagtite
+                            {
+                                collisionMap3 = true;
+                            }
+                            else
+                            {
+                                collisionMap3 = false;
+                            }
                         }
                     }
                 }

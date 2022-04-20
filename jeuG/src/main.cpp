@@ -11,9 +11,10 @@ int main()
 {
     window.setFramerateLimit(60);
     window.setVerticalSyncEnabled(false);
-    perso();
 
-    map = 1;
+    map = 2;    
+    
+    perso();
 
     while (window.isOpen())
     {
@@ -33,6 +34,7 @@ int main()
         }
         else if (map == 2)
         {
+            initMap1();
             initMap2();
             colisionMap2();
         }

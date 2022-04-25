@@ -26,7 +26,6 @@ void drawMenu(sf::RenderWindow &window);
     sf::Sound mu;
     int choix = 1;
     int music;
-    bool game2 = false;
     bool menu1 = true;
 
     sf::Texture openoption;

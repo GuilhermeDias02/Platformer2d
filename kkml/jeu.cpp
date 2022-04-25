@@ -10,17 +10,17 @@ void Game::initWindow()
 
 void Game::initPlayer()
 {
-    player = new Player();
+   player = new Player();
 }
 
 void Game::initMap()
 {
-  map = new Map();
+   map = new Map();
 }
 
 void Game::initMenu()
 {
-  menu = new Menu();
+   menu = new Menu();
 }
 
 Game::Game()
@@ -65,14 +65,14 @@ void Game::update()
         else if (ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Escape)
 	  window.close();
 
-	 
+	
         if (ev.type == sf::Event::KeyReleased && (ev.key.code == sf::Keyboard::Q || ev.key.code == sf::Keyboard::D || ev.key.code == sf::Keyboard::Space))
         {
             player->resetAnimationTimer();
         }
 	
     }
-
+    renderMenu();
     updatePlayer();
 
     updateCollision();
@@ -80,11 +80,13 @@ void Game::update()
 
 void Game::renderPlayer()
 {
+  std::cout<<"test1"<<std::endl;
     player->render(window);
 }
 
 void Game::renderMap()
 {
+  std::cout<<"test2"<<std::endl;
     map->drawBackground(window);
 }
 
@@ -95,27 +97,47 @@ void Game::renderMenu()
 
 void Game::render()
 {
-    window.clear();
-
-    //Render game
-
-    if  (menu1 == true)
-    renderMenu();
-
+  //window.clear();
+  bool Render = true;
+  while (Render == true)
+    {
+      update();
+      window.clear();
+      renderMap();
+      renderPlayer();
+      window.display();
+      
+    }
+  
+  /*  window.clear();
+  std::cout << "render" << std::endl;
+  //Render game
+  if (menu5 == true)
+    {
+      menu6 = false;
+      renderMenu();
+    }
+  
+  if (menu6 == true)      
+    {
+      menu5 = false;
+      renderMap();
+      renderPlayer();
+    }
     
-     else if(menu1 == false)
-     {
-    renderMap();
-    renderPlayer();
-     }
-    window.display();
+    window.display();*/
 }
 
 void Game::game1()
 {
 
-  //  Game();
-  
+initPlayer();
+initMap();
+updatePlayer();
+ update();
+renderPlayer();
+renderMap();
+ 
 }
 
 const sf::RenderWindow & Game::getWindow() const

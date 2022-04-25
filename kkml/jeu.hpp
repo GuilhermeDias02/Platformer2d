@@ -15,12 +15,13 @@ private:
     Player* player;
     Map* map;
     Menu* menu;
-    
+  
     void initWindow();
     void initMap();
     void initMenu();
     void initPlayer();
-    bool menu1 = true;
+  bool menu5 = true;
+  bool menu6 = true;
   
 public:
 

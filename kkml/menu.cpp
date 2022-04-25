@@ -1,6 +1,7 @@
 //#include "menu.hpp"
 #include "jeu.hpp"
 
+Game toto;
 Menu::Menu()
 {
   //Textures
@@ -54,7 +55,7 @@ Menu::Menu()
 
 void Menu::drawMenu(sf::RenderWindow &window)
 {
-  Game toto;
+  window.clear();
   if (choix == 1)
     window.draw(recupjouer);
 
@@ -83,9 +84,12 @@ if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
          mu.play();
        }
 
-//if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)&& choix == 1)
-   // toto.game1(); 
-  
+if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && choix == 1)
+  {
+    std::cout << "totorender" << std::endl;
+    window.close();
+    toto.render();  
+  }
  if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)&& choix == 2)
       entree = false;
 
@@ -95,4 +99,5 @@ window.draw(bakayoko);
 
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)&& choix == 3)
     window.close();
+  window.display();
 }

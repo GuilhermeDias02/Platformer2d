@@ -11,8 +11,7 @@ int main()
     {
       
         game.update();
-
-	  game.render();
+	//game.render();
     }
 
     return 0;

@@ -12,7 +12,7 @@ int main()
     window.setFramerateLimit(60);
     window.setVerticalSyncEnabled(false);
 
-    map = 3;    
+    map = 2;    
     
     perso();
 

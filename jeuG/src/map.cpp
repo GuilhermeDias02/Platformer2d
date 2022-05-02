@@ -40,7 +40,12 @@ void setKeyMap1()
     return;
   }
   key.setTexture(keyT);
-  key.setPosition(sf::Vector2f(1200.f, 560.f));
+  
+  if (cle = false)
+  {
+    key.setPosition(sf::Vector2f(1200.f, 560.f));
+  }
+  
   window.draw(key);
 }
 
@@ -164,7 +169,11 @@ void setDoorMap2()
 
 void setKeyMap2()
 {
-  key.setPosition(sf::Vector2f(1200.f, 160.f));
+  if (cle == false)
+  {
+    key.setPosition(sf::Vector2f(1200.f, 160.f));
+  }
+  
   window.draw(key);
 }
 
@@ -331,6 +340,13 @@ void BackgroundMap3()
 
 void setDoorMap3()
 {
+  if (!doorT.loadFromFile("../assets/porte.png"))
+  {
+    return;
+  }
+
+  door.setTexture(doorT);
+
   door.setPosition(sf::Vector2f(1200.f, 480.f));
 
   window.draw(door);
@@ -338,7 +354,17 @@ void setDoorMap3()
 
 void setKeyMap3()
 {
-  key.setPosition(sf::Vector2f(80.f, 480.f));
+  if (!keyT.loadFromFile("../assets/cle.png"))
+  {
+    return;
+  }
+  key.setTexture(keyT);
+
+  if (cle == false)
+  {
+    key.setPosition(sf::Vector2f(80.f, 480.f));
+  }
+
   window.draw(key);
 }
 

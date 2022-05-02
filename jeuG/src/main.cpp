@@ -11,8 +11,6 @@ int main()
 {
     window.setFramerateLimit(60);
     window.setVerticalSyncEnabled(false);
-
-    map = 2;    
     
     perso();
 
@@ -43,9 +41,6 @@ int main()
             initMap3();
             colisionMap3();
         }
-        
-        /*initMap2();
-        initMap3();*/
 
         colision();
 

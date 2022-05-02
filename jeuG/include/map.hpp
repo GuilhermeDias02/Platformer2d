@@ -20,6 +20,7 @@ void setBlocMap3();
 void initMap3();
 
 int n=0;
+bool cle = false;
 sf::Sprite bloc[50];
 sf::Sprite key;
 sf::Sprite water;

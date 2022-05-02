@@ -82,7 +82,7 @@ void colisionMap1()
         }
     }
 
-    if (shape.getPosition().x+shape.getSize().x > 1200 && shape.getPosition().y+shape.getPosition().y > 560)
+    if (shape.getPosition().x+shape.getSize().x > 1200 && shape.getPosition().y+shape.getSize().y > 560)
     {
         cle = true;
     }
@@ -212,12 +212,12 @@ void colisionMap3()
         }
     }
 
-    if (shape.getPosition().x+shape.getSize().x > 1200 && shape.getPosition().y+shape.getPosition().y > 160 && shape.getPosition().y < 240)
+    if (shape.getPosition().x+shape.getSize().x > 80 && shape.getPosition().x < 160 && shape.getPosition().y+shape.getPosition().y > 480 && shape.getPosition().y < 560)
     {
         cle = true;
     }
     
-    if (shape.getPosition().x+shape.getSize().x > 0 && shape.getPosition().x < 160 && shape.getPosition().y+shape.getSize().y > 480 && shape.getPosition().y < 640)
+    if (shape.getPosition().x+shape.getSize().x > 1200 && shape.getPosition().x < 1280 && shape.getPosition().y+shape.getSize().y > 480 && shape.getPosition().y < 640)
     {
         cle = false;
         //map = 4;

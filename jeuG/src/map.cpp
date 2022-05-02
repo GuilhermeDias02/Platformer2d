@@ -41,9 +41,14 @@ void setKeyMap1()
   }
   key.setTexture(keyT);
   
-  if (cle = false)
+  if (cle == false)
   {
     key.setPosition(sf::Vector2f(1200.f, 560.f));
+  }
+
+  if (cle == true)
+  {
+    key.setPosition(sf::Vector2f(1300.f, 800.f));
   }
   
   window.draw(key);
@@ -172,6 +177,11 @@ void setKeyMap2()
   if (cle == false)
   {
     key.setPosition(sf::Vector2f(1200.f, 160.f));
+  }
+
+  if (cle ==true)
+  {
+    key.setPosition(sf::Vector2f(1300.f, 800.f));
   }
   
   window.draw(key);
@@ -363,6 +373,11 @@ void setKeyMap3()
   if (cle == false)
   {
     key.setPosition(sf::Vector2f(80.f, 480.f));
+  }
+
+  if (cle == true)
+  {
+    key.setPosition(sf::Vector2f(1300.f, 800.f));
   }
 
   window.draw(key);

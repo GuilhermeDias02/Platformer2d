@@ -7,12 +7,12 @@ void colision();//fonction colision != variable collision
 void colisionMap1();
 void colisionMap2();
 void colisionMap3();
-void gravity();
-void jumping();
-void jump();
+//void gravity();
+//void jumping();
+//void jump();
 
 sf::RectangleShape shape(sf::Vector2f(80.f, 80.f));
-sf::Vector2f velocity;
+//sf::Vector2f velocity;
 sf::Vector2f position;
 bool collision;
 bool collisionMap1;
